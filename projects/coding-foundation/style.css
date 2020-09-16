@@ -7,25 +7,13 @@ body {
   align-items: center;
   text-align: center;
 }
-.title {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-h3 {
-  font-size: 30px;
-  text-align: center;
-  background-color: #8C4F54;
-  color: white;
-  width: auto;
-  padding: 10px;
-}
 
 p{
   font-size: 18px;
-  color: #73585B;
+  color: #C77E6F;
+  font-style: italic;
 }
-
+/* got this from w3shool */
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 }
@@ -41,6 +29,7 @@ p{
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  margin: 20px;
 }
 
 /* Mouse-over effects */
@@ -54,13 +43,25 @@ p{
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #8C4F54; /* Green background */
+  background: #C77E6F; /
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
+  background:#C77E6F;
   cursor: pointer; /* Cursor on hover */
+}
+#flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.boxes {
+  width: 25px;
+  height: 25px;
+  background-color: #6FB8C7;
+  margin: 10px;
 }
