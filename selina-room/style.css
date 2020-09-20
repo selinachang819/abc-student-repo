@@ -1,0 +1,113 @@
+body{
+    font-family: "Abril Fatface";
+}
+.images {
+  text-align: center;
+}
+#bg {
+  width: 100%;
+  position: relative;
+
+}
+.hyperlinks {
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+}
+
+.pa, .pb, .pc {
+  width: 20%;
+}
+.m1, .m2, .m3, .m4, .m5, .m6, .m7 {
+  width: 15%;
+}
+#m1, #m2, #m3, #m4, #m5, #m6, #m7 {
+  font-size: 5px;
+}
+.pc{
+  position: relative;
+  margin-top: -38%;
+  left: 20%;
+
+}
+.pb{
+  position: relative;
+  margin-top: 3%;
+  left: 7%;
+
+}
+.pa{
+  position: relative;
+  margin-top: 13%;
+  left: 18%;
+}
+.m1{
+  position: relative;
+  margin-top: -23%;
+  left: 49%;
+  width: 5%;
+
+}
+.m2{
+  position: relative;
+  margin-top:2%;
+  left: 55.5%;
+  width: 5%;
+
+}
+.m3{
+  position: relative;
+  margin-top: -10%;
+  left: 57%;
+  width: 8%;
+}
+.m4{
+  position: relative;
+  margin-top: 10% ;
+  left: 61%;
+  width: 8%;
+
+}
+.m5{
+  position: relative;
+  margin-top:-9%;
+  left: 67%;
+  width: 5%;
+
+}
+.m6{
+  position: relative;
+  margin-top:6%;
+  left: 71%;
+  width: 5%;
+}
+.m7{
+  position: relative;
+  margin-top:-9%;
+  left: 72%;
+
+}
+#pc, #pa, #pb {
+  font-size: 20px;
+}
+
+#lp-off, #lp-on{
+  position: absolute;
+  left: 37%;
+  top: 48%;
+  width: 15%;
+}
+#lp-on {
+  visibility: hidden;
+  top: 48.5%;
+}
+#audio {
+  visibility: hidden;
+}
+#info {
+  position: absolute;
+  margin-top: 14%;
+  left: 72%;
+  width: 8%;
+}
