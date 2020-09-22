@@ -29,6 +29,86 @@ p {
   50% { border-color: black; }
 }
 
-#slider{
-  margin: 20px;
+
+
+/* The slider itself */
+#slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 30%; /* Full-width */
+  height: 5px; /* Specified height */
+  border-radius: 2.5px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  margin: 50px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+#slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: black;
+  border-radius: 10px;
+  cursor: pointer; /* Cursor on hover */
+}
+
+#slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: black;
+
+  cursor: pointer; /* Cursor on hover */
+}
+#a1 {
+  margin-top: 20px;
+  position: relative;
+  left: 405px;
+  transform: rotate(-45deg);
+}
+#c1 {
+  margin: 120px;
+  margin-top: -40px;
+  margin-bottom: 50px;
+  position: relative;
+  left: -405px;
+  transform: rotate(45deg);
+}
+#c2 {
+  margin: 120px;
+  margin-top: -40px;
+  margin-bottom: 50px;
+  position: relative;
+  left: 405px;
+  transform: rotate(-45deg);
+}
+#c3{
+  position: relative;
+  left: -405px;
+  transform: rotate(45deg);
+}
+#a2 {
+  margin: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  left: -405px;
+  transform: rotate(45deg);
+}
+#a3 {
+  margin: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 405px;
+  transform: rotate(-45deg);
 }
