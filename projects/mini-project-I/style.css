@@ -8,27 +8,13 @@ p {
   font-family: "Courier New";
   font-size: 20px;
   font-weight: bold;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 50% }
+#hint {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-top: 20px;
 }
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
-
 
 
 /* The slider itself */
@@ -40,7 +26,7 @@ p {
   border-radius: 2.5px;
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
-  margin: 50px;
+  margin: 40px;
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
@@ -80,16 +66,17 @@ p {
   margin-top: -40px;
   margin-bottom: 50px;
   position: relative;
-  left: -405px;
-  transform: rotate(45deg);
+  left: 405px;
+  transform: rotate(-45deg);
 }
 #c2 {
   margin: 120px;
   margin-top: -40px;
   margin-bottom: 50px;
   position: relative;
-  left: 405px;
-  transform: rotate(-45deg);
+  left: -405px;
+  transform: rotate(45deg);
+
 }
 #c3{
   position: relative;
