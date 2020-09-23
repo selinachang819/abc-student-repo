@@ -1,8 +1,9 @@
 body{
-    font-family: "Abril Fatface";
+    font-family: "Comic Sans MS";
 }
 .images {
   text-align: center;
+  z-index: -1;
 }
 #bg {
   width: 100%;
@@ -15,78 +16,80 @@ body{
   text-align: center;
   position: relative;
 }
-
-.pa, .pb, .pc {
+.pa {
   width: 20%;
+  transform: rotate(-10deg);
+  top: 67%;
+  left: 25%;
 }
-.m1, .m2, .m3, .m4, .m5, .m6, .m7 {
-  width: 15%;
+ .pb, .pc {
+  width: 20%;
+  transform: rotate(-20deg);
+}
+.m3, .m4, .m7 {
+  width: 8%;
+  transform: rotate(10deg);
+}
+.m1 ,.m2, .m5, .m6{
+  width: 4%;
+  transform: rotate(7deg);
 }
 #m1, #m2, #m3, #m4, #m5, #m6, #m7 {
-  font-size: 5px;
+  font-size: 4px;
 }
 .pc{
-  position: relative;
-  margin-top: -38%;
-  left: 20%;
-
+  position: absolute;
+  top: 20%;
+  left: 27%;
 }
 .pb{
-  position: relative;
-  margin-top: 3%;
-  left: 7%;
-
+  position: absolute;
+  top: 34%;
+  left: 14%;
 }
 .pa{
-  position: relative;
-  margin-top: 13%;
-  left: 18%;
+  position: absolute;
+  top: 67%;
+  left: 25%;
 }
 .m1{
-  position: relative;
-  margin-top: -23%;
-  left: 49%;
-  width: 5%;
-
+  position: absolute;
+  width: 3%;
+  top: 22%;
+  left: 50%;
 }
 .m2{
-  position: relative;
-  margin-top:2%;
-  left: 55.5%;
-  width: 5%;
-
+  position: absolute;
+  top: 32%;
+  left: 57%;
 }
 .m3{
-  position: relative;
-  margin-top: -10%;
-  left: 57%;
+  position: absolute;
+  top: 19%;
+  left: 58.5%;
   width: 8%;
 }
 .m4{
-  position: relative;
-  margin-top: 10% ;
-  left: 61%;
+  position: absolute;
+  top: 42%;
+  left: 62%;
   width: 8%;
 
 }
 .m5{
-  position: relative;
-  margin-top:-9%;
-  left: 67%;
-  width: 5%;
-
+  position: absolute;
+  top: 24%;
+  left: 68%;
 }
 .m6{
-  position: relative;
-  margin-top:6%;
-  left: 71%;
-  width: 5%;
+  position: absolute;
+  top: 43%;
+  left: 72%;
 }
 .m7{
-  position: relative;
-  margin-top:-9%;
-  left: 72%;
-
+  position: absolute;
+  top: 33%;
+  left: 76%;
 }
 #pc, #pa, #pb {
   font-size: 20px;
@@ -95,19 +98,13 @@ body{
 #lp-off, #lp-on{
   position: absolute;
   left: 37%;
-  top: 48%;
+  top: 47.5%;
   width: 15%;
 }
 #lp-on {
   visibility: hidden;
-  top: 48.5%;
+  top: 48%;
 }
 #audio {
   visibility: hidden;
-}
-#info {
-  position: absolute;
-  margin-top: 14%;
-  left: 72%;
-  width: 8%;
 }
