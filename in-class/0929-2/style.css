@@ -1,0 +1,13 @@
+body {
+  text-align:center;
+}
+#box{
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #b08989;
+
+  transition: transform 2s;
+  cursor: pointer;
+}
