@@ -9,46 +9,84 @@
   <body>
     <!-- Hyperlink Gallery Banner -->
     <div style="position:fixed;width:100%;top:0;left:0;z-index:5;background-color:white;font-family:sans-serif;border:5px solid black;display:flex;justify-content:space-between;align-items:center;padding:0 20px;box-sizing:border-box;font-weight:bold;"><p style="margin:4px 0;margin-right:10px;font-weight:normal"><a style="color:black;font-size:0.9em;" href="https://abc.leoneckert.com/hyperlink-gallery"><< Lobby</a></p><span>H</span><span>y</span><span>p</span><span>e</span><span>r</span><span>l</span><span>i</span><span>n</span><span>k</span><span> </span><span>G</span><span>a</span><span>l</span><span>l</span><span>e</span><span>r</span><span>y</span><p style="margin:4px 0;margin-left:10px;font-weight:normal"><a style="color:black;font-size:0.9em;" href="https://abc.leoneckert.com/random-artist">random >></a></p></div>
-    <div id="all">
-      <div class="images">
-        <img id="bg" src="images/bg_1.png">
-      </div>
-      <div class="project-links">
-        <div class="projects">
-          <div class="pc">
-            <a href="" id="pc" target="_blank">Project C</a>
+    <div id="all" style="margin-top:50px;">
+      <!-- <img id="bg" src="images/bg_1.png"> -->
+      <!-- Slideshow container -->
+      <div class="title">/Gallery S.C./</div>
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+          <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-I/" target="_blank"><img src="images/‌miniproject1.png"></a>
+            <div class="text">Gestalt</div>
           </div>
-          <div class="pb">
-            <a href="" id="pb" target="_blank">Project B</a>
+
+          <div class="mySlides fade">
+            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-2/" target="_blank"><img src="images/miniproject2.png"></a>
+            <div class="text">The Secret of Pets</div>
           </div>
-          <div class="pa">
-            <a href="" id="pa" target="_blank">Project A</a>
+
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-3/" target="_blank"><img src="images/miniproject3.png"></a> -->
+            <div class="text">Mini Project 3</div>
           </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <a href="https://selinachang819.github.io/abc-student-repo/projects/project-A/" target="_blank"><img src="images/projectA.png"></a> -->
+            <div class="text">Project A</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg"alt="project preview"> -->
+            <div class="text">Mini Project 4</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg"alt="project preview"> -->
+            <div class="text">Mini Project 5</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg"alt="project preview"> -->
+            <div class="text">Project B</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg"alt="project preview"> -->
+            <div class="text">Mini Project 6</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg"alt="project preview"> -->
+            <div class="text">Mini Project 7</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="preview">Project Preview</div>
+            <!-- <img src="img3.jpg" style="width:100%"> -->
+            <div class="text">Project C</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="mini-projects">
-          <div class="m1">
-            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-I/" id="m1" target="_blank">Gestalt</a>
-          </div>
-          <div class="m2">
-            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-2/" id="m2" target="_blank">The Secret of Pets</a>
-          </div>
-          <div class="m3">
-            <a href="" id="m3" target="_blank">Mini Project #3</a>
-          </div>
-          <div class="m4">
-            <a href="" id="m4" target="_blank">Mini Project #4</a>
-          </div>
-          <div class="m5">
-            <a href="" id="m5" target="_blank">Mini Project #5</a>
-          </div>
-          <div class="m6">
-            <a href="" id="m6" target="_blank">Mini Project #6</a>
-          </div>
-          <div class="m7">
-            <a href="" id="m7" target="_blank">Mini Project #7</a>
-          </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
         </div>
-      </div>
+
       <img id="lp-off" src="images/lp-off.png">
       <img id="lp-on" src="images/lp-on.gif">
       <audio id="audio" src="audio/bgm.mp3" loop controls>
