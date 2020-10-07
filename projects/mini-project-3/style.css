@@ -2,13 +2,18 @@ body {
   background-image: url(images/disco.jpg);
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-  font-size: 30px;
-  color: white;
   margin: 0;
 }
 p{
+  font-size: 30px;
+  color: white;
   margin: 0;
   padding: 30px;
+}
+.info{
+  padding: 0;
+  margin: 10px;
+  font-size: 15px;
 }
 
 #figure {

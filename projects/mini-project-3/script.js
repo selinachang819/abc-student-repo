@@ -1,7 +1,21 @@
 let figure= document.getElementById('figure');
 let all= document.getElementById('all');
+let music= document.getElementById('disco');
 let btn =document.getElementById('button');
+let btn2 =document.getElementById('button2');
+let musicPlay= true;
 
+btn2.addEventListener('click',()=>{
+
+  if (musicPlay==true) {
+    music.pause();
+    musicPlay=false;
+  }
+  else {
+    musicPlay=true;
+    music.play();
+  }
+})
 //oscillator-1
 let context = new AudioContext();
 let destination=context.destination;
@@ -15,6 +29,8 @@ gain.connect(destination);
 let oscillatorStarted = false;
 let figureMoved= false;
 
+//toggle to move the robots
+//based on the mouse position, frequency and gain of the oscillator is changed accordingly
 figure.addEventListener('click',(event)=>{
         if(!oscillatorStarted){
         oscillator.start(0);
@@ -52,7 +68,7 @@ figure.addEventListener('click',(event)=>{
             }
         })
         });
-
+//create new robot and do the same
   button.addEventListener('click',()=>{
       let robot= document.createElement("img");
       robot.src="images/robot-1.png";
