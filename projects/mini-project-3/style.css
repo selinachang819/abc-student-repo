@@ -1,0 +1,55 @@
+body {
+  background-image: url(images/disco.jpg);
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin: 0;
+}
+p{
+  margin: 0;
+  padding: 30px;
+}
+
+#figure {
+  width: 15%;
+  position: absolute;
+  top:450px;
+}
+#robot{
+  width: 15%;
+  position: absolute;
+  top:450px;
+}
+button {
+  font-family:  'Press Start 2P', cursive;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+#all {
+  height: 720px;
+  margin-top: 0;
+  animation-name: changeColor;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes changeColor {
+  0%{
+      background-color: rgba(236, 161, 161, 0.3);
+  }
+  25%{
+      background-color: rgba(161, 236, 236, 0.3);
+  }
+  50%{
+      background-color: rgba(161, 236, 161, 0.3);
+  }
+  75%{
+      background-color: rgba(161, 236, 236, 0.3);
+  }
+  100%{
+      background-color: rgba(236, 161, 161, 0.3);
+  }
+}
