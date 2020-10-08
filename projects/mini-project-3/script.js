@@ -35,90 +35,83 @@ gain.connect(destination);
 let oscillatorStarted = false;
 let figureMoved= false;
 
-//toggle to move the robots
-//based on the mouse position, frequency and gain of the oscillator is changed accordingly
-figure.addEventListener('click',(event)=>{
-        if(!oscillatorStarted){
-        oscillator.start(0);
-        oscillatorStarted = true;
-        }
-        if (figureMoved==false) {
-          figureMoved=true;
-          figure.src="images/robot-dancing.gif";
+        figure.addEventListener('click', (event)=>{
+          if(!oscillatorStarted){
+            oscillator.start(0);
+            oscillatorStarted = true;
+          }
 
-        } else {
-          figureMoved=false;
-        }
-        console.log(figureMoved);
-        all.addEventListener('mousemove',(event)=>{
-
-            if (figureMoved==true) {
-              let mouseX= event.clientX;
-              let mouseY= event.clientY;
-              figure.style.left=mouseX - 74 + "px";
-              figure.style.top= mouseY- 81 + "px";
-              oscillator.frequency.value= mouseX/screen.width*1000;
-            }else{
-              figure.addEventListener('click', (event)=>{
-                let mouseX= event.clientX;
-                let mouseY= event.clientY;
-                figure.style.left=mouseX - 74 + "px";
-                figure.style.top= mouseY- 81 + "px";
-                oscillator.frequency.value=mouseX/screen.width*1000;;
-              })
-            }
+          if (figureMoved==false) {
+            figureMoved=true;
+            figure.src="images/robot-dancing.gif";
+          } else {
+            let mouseX= event.clientX;
+            let mouseY= event.clientY;
+            figure.style.left=mouseX - 74 + "px";
+            figure.style.top= mouseY- 81 + "px";
+            oscillator.frequency.value=mouseX/screen.width*1000;
+            figureMoved=false;
+          }
         })
-        });
+        all.addEventListener('mousemove',(event)=>{
+          if (figureMoved==true) {
+            let mouseX= event.clientX;
+            let mouseY= event.clientY;
+            figure.style.left=mouseX - 74 + "px";
+            figure.style.top= mouseY- 81 + "px";
+            oscillator.frequency.value= mouseX/screen.width*1000;
+          }
+        })
 
-        let context1 = new AudioContext();
-        let destination1=context1.destination;
-        let oscillator1 = context1.createOscillator();
-        oscillator1.type="triangle";
-        oscillator1.frequency.value = 440;
-        let gain1 = context1.createGain();
-        oscillator1.connect(gain1);
-        gain1.connect(destination1);
 
 //create new robot and do the same
   button.addEventListener('click',()=>{
+
+    let context1 = new AudioContext();
+    let destination1=context1.destination;
+    let oscillator1 = context1.createOscillator();
+    oscillator1.type="triangle";
+    oscillator1.frequency.value = 440;
+    let gain1 = context1.createGain();
+    oscillator1.connect(gain1);
+    gain1.connect(destination1);
+
+
       let robot= document.createElement("img");
       robot.src="images/robot-1.png";
       robot.id="robot";
-      document.body.appendChild(robot);
+      all.appendChild(robot);
 
       let oscillatorStarted = false;
       let robotMoved= false;
-      robot.addEventListener('click',(event)=>{
-              if(!oscillatorStarted){
-              oscillator1.start(0);
-              oscillatorStarted = true;
-              }
-              if (robotMoved==false) {
-                robotMoved=true;
-                robot.src="images/robot-dancing.gif";
 
-              } else {
-                robotMoved=false;
+      robot.addEventListener('click', (event)=>{
+        if(!oscillatorStarted){
+          oscillator1.start(0);
+          oscillatorStarted = true;
+        }
 
+        if (robotMoved==false) {
+          robotMoved=true;
+          robot.src="images/robot-dancing.gif";
+        } else {
+          let mouseX= event.clientX;
+          let mouseY= event.clientY;
+          robot.style.left=mouseX - 74 + "px";
+          robot.style.top= mouseY- 81 + "px";
+          oscillator1.frequency.value=mouseX/screen.width*1000;
+          robotMoved=false;
+        }
+      })
+      all.addEventListener('mousemove',(event)=>{
+        console.log(event.clientX)
+        if (robotMoved==true) {
+          let mouseX= event.clientX;
+          let mouseY= event.clientY;
+          robot.style.left=mouseX - 74 + "px";
+          robot.style.top= mouseY- 81 + "px";
+          oscillator1.frequency.value= mouseX/screen.width*1000;
+        }
+      })
 
-              }
-              all.addEventListener('mousemove',(event)=>
-                { if (robotMoved==true) {
-                  let mouseX= event.clientX;
-                  let mouseY= event.clientY;
-                  robot.style.left=mouseX - 74 + "px";
-                  robot.style.top= mouseY- 81 + "px";
-                  oscillator1.frequency.value= mouseX/screen.width*1000;;
-                }
-                else{
-                  robot.addEventListener('click', (event)=>{
-                    let mouseX= event.clientX;
-                    let mouseY= event.clientY;
-                    robot.style.left=mouseX - 74 + "px";
-                    robot.style.top= mouseY- 81 + "px";
-                    oscillator1.frequency.value=mouseX/screen.width*1000;;
-                  });
-                }
-                });
-      });
       });
