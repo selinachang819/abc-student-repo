@@ -10,10 +10,16 @@ btn2.addEventListener('click',()=>{
   if (musicPlay==true) {
     music.pause();
     musicPlay=false;
+    btn2.innerHTML="Keeps playing!";
+    gain.gain.value=0;
+    gain1.gain.value=0;
   }
   else {
     musicPlay=true;
     music.play();
+    btn2.innerHTML="Stop the music!!!";
+    gain.gain.value=0.1;
+    gain1.gain.value=0.1;
   }
 })
 //oscillator-1
@@ -38,13 +44,10 @@ figure.addEventListener('click',(event)=>{
         }
         if (figureMoved==false) {
           figureMoved=true;
-          gain.gain.value=0;
           figure.src="images/robot-dancing.gif";
 
         } else {
           figureMoved=false;
-          gain.gain.value = 0.1;
-
         }
         console.log(figureMoved);
         all.addEventListener('mousemove',(event)=>{
@@ -55,19 +58,27 @@ figure.addEventListener('click',(event)=>{
               figure.style.left=mouseX - 74 + "px";
               figure.style.top= mouseY- 81 + "px";
               oscillator.frequency.value= mouseX/screen.width*1000;
-              gain.gain.value = (screen.height-mouseY)/screen.height*0.5;
             }else{
               figure.addEventListener('click', (event)=>{
                 let mouseX= event.clientX;
                 let mouseY= event.clientY;
                 figure.style.left=mouseX - 74 + "px";
                 figure.style.top= mouseY- 81 + "px";
-                oscillator.frequency.value= mouseX/screen.width*1000;
-                gain.gain.value = (screen.height-mouseY)/screen.height*0.5;
+                oscillator.frequency.value=mouseX/screen.width*1000;;
               })
             }
         })
         });
+
+        let context1 = new AudioContext();
+        let destination1=context1.destination;
+        let oscillator1 = context1.createOscillator();
+        oscillator1.type="triangle";
+        oscillator1.frequency.value = 440;
+        let gain1 = context1.createGain();
+        oscillator1.connect(gain1);
+        gain1.connect(destination1);
+
 //create new robot and do the same
   button.addEventListener('click',()=>{
       let robot= document.createElement("img");
@@ -75,31 +86,20 @@ figure.addEventListener('click',(event)=>{
       robot.id="robot";
       document.body.appendChild(robot);
 
-      let context = new AudioContext();
-      let destination=context.destination;
-      let oscillator = context.createOscillator();
-      oscillator.type="triangle";
-      oscillator.frequency.value = 440;
-      let gain = context.createGain();
-      oscillator.connect(gain);
-      gain.connect(destination);
-
       let oscillatorStarted = false;
       let robotMoved= false;
-
       robot.addEventListener('click',(event)=>{
               if(!oscillatorStarted){
-              oscillator.start(0);
+              oscillator1.start(0);
               oscillatorStarted = true;
               }
               if (robotMoved==false) {
                 robotMoved=true;
-                gain.gain.value=0;
                 robot.src="images/robot-dancing.gif";
 
               } else {
                 robotMoved=false;
-                gain.gain.value = 0.1;
+
 
               }
               all.addEventListener('mousemove',(event)=>
@@ -108,8 +108,7 @@ figure.addEventListener('click',(event)=>{
                   let mouseY= event.clientY;
                   robot.style.left=mouseX - 74 + "px";
                   robot.style.top= mouseY- 81 + "px";
-                  oscillator.frequency.value= mouseX/screen.width*1000;
-                  gain.gain.value = (screen.height-mouseY)/screen.height*0.5;
+                  oscillator1.frequency.value= mouseX/screen.width*1000;;
                 }
                 else{
                   robot.addEventListener('click', (event)=>{
@@ -117,8 +116,7 @@ figure.addEventListener('click',(event)=>{
                     let mouseY= event.clientY;
                     robot.style.left=mouseX - 74 + "px";
                     robot.style.top= mouseY- 81 + "px";
-                    oscillator.frequency.value= mouseX/screen.width*1000;
-                    gain.gain.value = (screen.height-mouseY)/screen.height*0.5;
+                    oscillator1.frequency.value=mouseX/screen.width*1000;;
                   });
                 }
                 });
