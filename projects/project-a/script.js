@@ -5,7 +5,7 @@ let piano=document.getElementById('keyboard');
 let painting=document.getElementById('painting');
 let pause=document.getElementById('pause');
 let resume=document.getElementById('resume');
-let print=document.getElementById('print');
+let downloadButton=document.getElementById('dl');
 let restart=document.getElementById('restart');
 let noteFreq=["261.63","293.66","329.63","349.23","392","440","493.88","523.25","587.33","659.25"];
 let tetrisStyles=[
@@ -21,8 +21,7 @@ colorInput.addEventListener('change',()=>{
   document.getElementById('title').style.backgroundColor=colorInput.value;
   resume.style.backgroundColor=colorInput.value;
   restart.style.backgroundColor=colorInput.value;
-
-  print.style.backgroundColor=colorInput.value;
+  downloadButton.style.backgroundColor=colorInput.value;
   document.getElementById('start').innerHTML="Now, press spacebar to start! Then press again to pause!";
 })
 
@@ -63,7 +62,7 @@ document.body.addEventListener('keypress',(event)=>{
     gain.gain.value=0.5;
     statusPlayed=false;
     intro.style.display="block";
-    painting.style.opacity=0;
+    painting.style.opacity=0.7;
     piano.style.opacity=0.7;
     console.log(statusPlayed);
   }
@@ -550,10 +549,10 @@ resume.addEventListener('click',()=>{
 restart.addEventListener('click',()=>{
   window.location.reload();
 })
-print.addEventListener('click',()=>{
-  intro.style.display="none";
-  html2canvas(document.querySelector("#all")).then(canvas => {
-      document.body.appendChild(canvas);
-      canvas.toDataURL('mywork.png');
+downloadButton.addEventListener('click',()=>{
+    painting.style.opacity=1;
+  html2canvas(document.querySelector("#painting")).then(canvas => {
+      let dt =canvas.toDataURL('images/png');
+      download(dt, "my work.png", "image/png")
   });
 })

@@ -5,19 +5,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/nyo6gtm.css">
     <title></title>
+    <script type="text/javascript"src="html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js" integrity="sha512-WiGQZv8WpmQVRUFXZywo7pHIO0G/o3RyiAJZj8YXNN4AV7ReR1RYWVmZJ6y3H06blPcjJmG/sBpOVZjTSFFlzQ==" crossorigin="anonymous"></script>
   </hea>
   <body>
     <div class="piano" id="keyboard">
-        <div class="press teris1" id="a">A</div>
-        <div class="press" id="s">S</div>
-        <div class="press" id="d">D</div>
-        <div class="press" id="f">F</div>
-        <div class="press" id="g">G</div>
-        <div class="press" id="h">H</div>
-        <div class="press" id="j">J</div>
-        <div class="press" id="k">K</div>
-        <div class="press" id="l">L</div>
-        <div class="press" id="p">;</div>
+        <div class="press teris1" id="a">A (C4)</div>
+        <div class="press" id="s">S (D4)</div>
+        <div class="press" id="d">D (E4)</div>
+        <div class="press" id="f">F (F4)</div>
+        <div class="press" id="g">G (G4)</div>
+        <div class="press" id="h">H (A4)</div>
+        <div class="press" id="j">J (B4)</div>
+        <div class="press" id="k">K (C5)</div>
+        <div class="press" id="l">L (D5)</div>
+        <div class="press" id="p">; (E5)</div>
         </div>
 
     <div class="instruction" id="intro">
@@ -33,18 +35,16 @@
         <p>I would like to:</p>
         <div id="btn">
           <button type="button" id="resume">Resume</button>
-          <!-- <button type="button" id="print">Save My Work!</button> -->
+          <button type="button" id="dl">Save My Work!</button>
+          <!-- <button type="button" id="download">Save My Work!</button> -->
           <button type="button" id="restart">Restart</button>
         </div>
       </div>
-      <div id="work">
-      </div>
     </div>
-    <div id="painting"> </div>
+    <div id="painting"></div>
 
   <script type="text/javascript" src="script.js">
   </script>
-  <script type="text/javascript"src="html2canvas.min.js">
-  </script>
+
   </body>
 </html>
