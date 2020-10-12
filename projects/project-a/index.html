@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nyo6gtm.css">
+    <title></title>
+  </hea>
+  <body>
+    <div class="piano" id="keyboard">
+        <div class="press teris1" id="a">A</div>
+        <div class="press" id="s">S</div>
+        <div class="press" id="d">D</div>
+        <div class="press" id="f">F</div>
+        <div class="press" id="g">G</div>
+        <div class="press" id="h">H</div>
+        <div class="press" id="j">J</div>
+        <div class="press" id="k">K</div>
+        <div class="press" id="l">L</div>
+        <div class="press" id="p">;</div>
+        </div>
+
+    <div class="instruction" id="intro">
+      <div class="title">
+        <p id="title">Tetris Artist.exe</p>
+      </div>
+      <div id="initial">
+        <p>Select a color you like:</p>
+        <input type="color" name="basedColor" value="#000000" id="input">
+        <p id="start"></p>
+      </div>
+      <div id="pause"  style="display:none;">
+        <p>I would like to:</p>
+        <div id="btn">
+          <button type="button" id="resume">Resume</button>
+          <!-- <button type="button" id="print">Save My Work!</button> -->
+          <button type="button" id="restart">Restart</button>
+        </div>
+      </div>
+      <div id="work">
+      </div>
+    </div>
+    <div id="painting"> </div>
+
+  <script type="text/javascript" src="script.js">
+  </script>
+  <script type="text/javascript"src="html2canvas.min.js">
+  </script>
+  </body>
+</html>

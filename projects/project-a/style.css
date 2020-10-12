@@ -1,0 +1,67 @@
+body{
+  text-align: center;
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-size: 25px;
+  background-image: url(bg.jpg);
+  margin: 0;
+}
+.instruction {
+  margin: auto;
+  margin-top: 5%;
+  width: 30%;
+  padding: 0;
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+#title{
+  text-align: left;
+  padding: 5px;
+  margin: 0;
+  font-size: 15px;
+  background-color: #262626;
+  color: white;
+}
+.selection {
+  margin: auto;
+  text-align: center;
+  align-items:center;
+  display: flex;
+}
+
+.piano{
+  display: flex;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  visibility: hidden;
+}
+.press{
+  width: 10%;
+  height: 40px;
+  background-color: white;
+}
+
+.tetris {
+  position: absolute;
+  margin-left: 20px;
+}
+
+button{
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border: none;
+  margin: 10px;
+}
+#painting{
+    background-image: url(bg.jpg);
+    z-index: -1;
+}
+canvas{
+  position:  relative;
+  margin-left: auto;
+  margin-right: auto;
+}
