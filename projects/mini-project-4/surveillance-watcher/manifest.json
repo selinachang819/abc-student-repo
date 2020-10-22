@@ -1,7 +1,7 @@
 {
     "name":"Surveillance Watcher",
     "version":"1.0",
-    "description":"Protect you from unknown survellience",
+    "description":"Protect you from unknown surveillance",
     "manifest_version": 2,
     "permissions": ["activeTab"],
     "content_scripts":[
