@@ -1,0 +1,19 @@
+{
+    "name":"Video Blocker",
+    "version":"1.0",
+    "description":"Block Youtube and Netflix when you need to go to bed",
+    "manifest_version": 2,
+    "permissions": [
+          "webRequest",
+          "webRequestBlocking",
+          "*://*/*"
+        ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "browser_action":{
+      "default_icon":"tv.png",
+      "default_popup":"popup/popup.html"
+    }
+}
