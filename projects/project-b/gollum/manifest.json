@@ -1,7 +1,7 @@
 {
   "name": "Gollumm",
   "version": "1.3",
-  "description": "",
+  "description": "A tiny little creature that constantly cares about you.",
   "manifest_version": 2,
   "permissions": [
     "system.display",
