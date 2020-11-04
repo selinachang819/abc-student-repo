@@ -1,4 +1,4 @@
-#Gollum
+# Gollum
 ## Intoduction
 More and more people nowadays have been fixated on browsing the internet and interacting with others on social media platforms. The web and the service providers do benefit us in several aspects. Nonetheless, all the convenience brought are based on the recorded information that we voluntarily/involuntarily give to the service providers. We are constantly being watched by someone no matter what we are doing. Inspired by Netflix’s original docudrama **The Social Dilemma**, this project aims to empower people with a sense of alertness while browsing the web through a physical presence of the gollum that is always watching your action and commenting on your action/inactions.
 ! May bring a feeling of discomfort, and this is what we aim at :)
