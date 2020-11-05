@@ -1,18 +1,4 @@
-//1. reverse texts every 10 seconds
-let myVar
-function reverseText() {
-    myVar=setInterval(function() {
-    let text= Array.from(document.querySelectorAll('p'));
-
-    for (var i = 0; i < text.length; i++) {
-      let k= i;
-      text[k].innerHTML=text[k].textContent.split(' ').reverse().join(' ');
-    }
-  },10000)
-}
-window.onload=reverseText();
-
-//2. mouse tracing
+//1. mouse tracing
 document.body.addEventListener('mousemove',()=>{
   let gollumX= window.innerWidth/2;
   let gollumY= 0;
@@ -21,7 +7,7 @@ document.body.addEventListener('mousemove',()=>{
  chrome.runtime.sendMessage(rot);
 })
 
-//3. generate generics
+//2. generate generics
 let greeting = "I'm always watching you.";
 let generic1 = "I am watching you..."
 let generic2 = "Good choice";
@@ -29,7 +15,7 @@ let generic3 = "Huh..Interesting";
 let generic4 = "Are you at"+ document.title+"?";
 let genericSayings = [generic1, generic2, generic3,generic4];
 
-//4. when the user click anywhere on the page, the gollum will speak
+//3. when the user click anywhere on the page, the gollum will speak
 //indicating that he's going to do something to the browser
 let synth = window.speechSynthesis;
 let active
