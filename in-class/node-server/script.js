@@ -2,11 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('public'))
-
 app.get('/', (req, res) => {
-  console.log(req.query)
-  res.send('Hello World!')
+
+  res.sendFile(__dirname +'/landing/index.html')
 })
 
 app.listen(port, () => {
