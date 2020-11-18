@@ -12,6 +12,7 @@ function createRelay(data) {
   word.innerHTML=relayWords[i] + "->";
   sentence.appendChild(word);})
   ;
+
 }
 
 btn.addEventListener('click',()=>{

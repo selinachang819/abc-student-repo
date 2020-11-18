@@ -22,9 +22,13 @@ app.get('/result', (req, res) => {
 
 app.get('/relay', (req, res) => {
   let word=req.query.word;
-  words.push(word);
-  console.log(words);
-  res.json({relayWords:words});
+  if (word!="") {
+    words.push(word);
+    console.log(words);
+    res.json({relayWords:words});
+  }else{
+    res.json({relayWords:words});
+  }
 })
 
 
