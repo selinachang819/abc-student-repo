@@ -1,7 +1,11 @@
 body {
   margin: 0;
+  background-image: url('bg.jpg');
+  font-family: 'Reenie Beanie', cursive;
 }
-
+p {
+  font-size: 30px;
+}
 .wrapper{
   display: flex;
   justify-content: center;
@@ -11,13 +15,29 @@ body {
 }
 
 .interface{
-  border: 3px dashed black;
-  width: 400px;
-  height: 400px;
+  box-shadow: 2px 3px 10px 1px #686868;
+  background-color: #fbfbf8;
+  width: 420px ;
+  height: 594px;
   padding: 20px;
 }
 .texts {
   overflow: auto;
   width: 100%;
-  line-height: 200%;
+  line-height: 300%;
+}
+input {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 20px;
+}
+button {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+span {
+  font-weight: bold;
 }
