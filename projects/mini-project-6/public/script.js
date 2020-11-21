@@ -24,7 +24,7 @@ socket.on('addingWords',(data)=>{
   sentence.innerHTML="";
   relayWords.forEach((item, i) => {
     let word= document.createElement("span");
-      word.innerHTML=relayWords[i] + "->";
+      word.innerHTML=relayWords[i] + " ->";
       sentence.appendChild(word);
   });
 
