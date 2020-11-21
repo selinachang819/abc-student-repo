@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.interface{
+  border: 3px dashed black;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}

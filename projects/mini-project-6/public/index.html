@@ -2,14 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Intro Gate</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <title>Words Relay Plaground</title>
   </head>
   <body>
-    <p>What's my constellation type?</p>
-    <audio id="hint" src="/wrong/hint.mp3" controls style="display:none"></audio>
-    <input type="text" name="text" id="input" placeholder="Type a type!">
-    <button type="button" id="button">Guess!</button>
-    <script type="text/javascript" src="script.js">
+    <div class="wrapper">
+      <div class="interface">
+        <h1>Hi there!!</h1>
+        <p>Let's do a words relay!</p>
+        <p>I'll start with the word:</p>
+        <p>Powerpuff->
+          <span id="words"></span>
+          <input type="text" id="input" style="display:none" placeholder="Type some words in!"></<input>
+          <button type="button" id="button">Start!</button></p>
+      </div>
+    </div>
+
+    <script src="script.js">
     </script>
   </body>
 </html>
