@@ -64,6 +64,9 @@ socket.on('broadcast',(data)=>{
   level.innerHTML=data.level;
   levelPoint.innerHTML=data.maximum;
   pet.src=data.selection;
+  if (data.count<10) {
+    feed.innerHTML="Hatch";
+  }
   if (data.count>=10) {
     feed.innerHTML="Feed";
     stroll.style.visibility="visible";
