@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi!</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+        <button type="button" id="icon">?</button>
+        <div id="instruction">
+          <ol>
+            <li>You first need to hatch the egg</li>
+            <li>You can take it for a walk when it becomes Lv.2</li>
+            <li>It needs a bath after coming back from walk!</li>
+          </ol>
+        </div>
+      <div class="egg">
+        <div class="announcement">
+          <p id="info">Announcement will be shown here</p>
+        </div>
+        <div class="screen">
+          <p>Lv.<span id="level">1</span>(<span id="growth">0</span>/<span id="levelPoint">10</span>)</p>
+          <img id="pet" src="images/lv1.png" alt="">
+          <img id="poop" src="images/poop.png" alt="">
+        </div>
+        <div class="buttons">
+          <button type="button" id="stroll">Stroll</button>
+          <button type="button" id="feed">Hatch</button>
+          <button type="button" id="bath">Bath</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
