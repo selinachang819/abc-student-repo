@@ -29,7 +29,7 @@ icon.addEventListener('click',()=>{
   }
 })
 stroll.addEventListener('click',()=>{
-  info.innerHTML="You took it for a walk!";
+  info.innerHTML="You take it for a walk!";
   let data= {msg:"Someone took it for a walk!"};
   socket.emit('message', data);
 })
