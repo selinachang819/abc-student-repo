@@ -35,7 +35,6 @@ stroll.addEventListener('click',()=>{
 })
 feed.addEventListener('click',()=>{
   info.innerHTML="You gave it some snacks!";
-
   let data= {msg:"Someone fed the pet!"};
   socket.emit('message', data);
 })
