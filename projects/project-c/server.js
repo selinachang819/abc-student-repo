@@ -149,11 +149,11 @@ io.on('connection', (socket) => {
     //key interaction
     if(data.message == "the key is up"){
       players[data.index].y -=5;
-      console.log("player " + data.index +" is pressing up",  players[data.index].y)
+      // console.log("player " + data.index +" is pressing up",  players[data.index].y)
     }
     if(data.message =="the key is down"){
       players[data.index].y +=5;
-      console.log("player " + data.index +" is pressing down", players[data.index].y )
+      // console.log("player " + data.index +" is pressing down", players[data.index].y )
     }
 });
       setInterval(()=>{
