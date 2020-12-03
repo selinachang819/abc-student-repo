@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+var port = process.env.PORT;
 
 let totalPlayers
 let gameStarted=false;
@@ -174,6 +175,6 @@ io.on('connection', (socket) => {
     },10);
 })
 
-http.listen(3000, () => {
-  console.log('listening on *:3000');
+http.listen(port, () => {
+  console.log('listening on *:' + port);
 });
