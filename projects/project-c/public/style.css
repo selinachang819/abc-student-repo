@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background-color: rgb(250, 163, 9);
-  overflow: hidden;
   font-family: 'Goldman', cursive;
 }
 /* overall wrapper */
@@ -52,7 +51,7 @@ body {
 }
 /* game page */
 #game {
-  display: flex;
+  display: hidden;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;

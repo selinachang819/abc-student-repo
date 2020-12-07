@@ -4,6 +4,7 @@ let number//totalPlayers
 let role
 let team
 let playerInfo// team:role
+let gameStatus
 let join=document.getElementById('join');
 let watch=document.getElementById('watch');
 let text1=document.getElementById('text1');
@@ -244,13 +245,11 @@ socket.on("gameData", (data) => {
         game.style.display="flex";
       },3000);
     }
-    if(data.gameStatus == "end"){
-      location.reload();
-    }
     // if (data.gameStatus="end") {
     //
     // }
   })
+
 //if anyone is missing
 // the audience will have the chance to replace the previous players
 socket.on('missingPlayers',(data)=>{
@@ -273,7 +272,10 @@ socket.on('missingPlayers',(data)=>{
 //he can replace the player through sending a message to the server of which role he's playingdata
 socket.on('ending',(data)=>{
   console.log(data);
-  alert("GAME ENDS!"+data.redScore+":"+data.blueScore);
+  alert(data.redScore+":"+data.blueScore +" -> New game will be available to join after clicking OK");
+  if (data.status="end") {
+    location.reload();
+  }
 })
 
 function render() {

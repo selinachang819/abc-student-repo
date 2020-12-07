@@ -117,22 +117,27 @@ setInterval(()=>{
           ballSpdX = -ballSpdX;
         }
       }
-      //ballY>=295&&ballY<=359
+      ballY>=295&&ballY<=359
       //check which team scores;*ballY needed
-      if (ballX <= 0) {
+      if (ballX <= 0 &&ballY>=295&&ballY<=359) {
         blueScore += 1;
       }
-      if (ballX >= 1000) {
+      if (ballX >= 1000 &&ballY>=295&&ballY<=359) {
         redScore += 1;
       }
     }
 
   if (gameStatus=="starts" && (redScore==7||blueScore==7)) {
-      gameStatus="end";
-      io.emit('ending', {redScore:redScore, blueScore:blueScore});
+      gameStatus="waiting";
+      io.emit('ending', {redScore:redScore, blueScore:blueScore, status:"end"});
       console.log(redScore, blueScore);
       redScore=0;
       blueScore=0;
+      ballX = 500;
+      ballY = 250;
+      ballSpdX = 5;
+      ballSpdY = 5;
+      totalPlayers=0;
       }
   io.emit('gameData', {
       ball:{
