@@ -233,6 +233,7 @@ io.on('connection', (socket) => {
     console.log(replaceRole);
     players[replaceRole].id=socket.id;
     socket.emit("role", {role:players[replaceRole].index, team:players[replaceRole].team})
+    io.emit('replaceSuccess',{role:replaceRole});
     if (replaceRole<=3){
       socket.join('teamRed');
       players[replaceRole].status = "active";

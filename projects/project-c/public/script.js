@@ -17,6 +17,7 @@ let roleBox=document.getElementById('roleBox');
 let playersList=document.getElementsByClassName('players');
 let replaceBtns=document.getElementsByClassName('replace');
 let missingPlayer
+let replacedPlayer
 //chatBox
 let memberSelection= document.getElementById('selectMember');
 let message= document.getElementById('message');
@@ -268,6 +269,17 @@ socket.on('missingPlayers',(data)=>{
       replaceBtns[missingPlayer].addEventListener('click', replace)
   }
 }})
+//if anyone is being replaced, it will tell all the audience that the role is taken
+socket.on('replaceSuccess',(data)=>{
+  replacedPlayer=data.role;
+  console.log(replacedPlayer);
+  for (var i = 0; i < replaceBtns.length; i++) {
+    if (replacedPlayer==i) {
+      console.log(missingPlayer);
+      replaceBtns[missingPlayer].style.display="none";
+    }
+  }
+})
 //when audience sees a position able to be replaced
 //he can replace the player through sending a message to the server of which role he's playingdata
 socket.on('ending',(data)=>{
