@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: rgb(250, 163, 9);
   font-family: 'Goldman', cursive;
+  overflow: hidden;
 }
 /* overall wrapper */
 .masterWrapper{
@@ -106,7 +107,7 @@ body {
 /* side boxes styling*/
 #roleBox, #chatBox {
   border:1px solid black;
-  width: 300px;
+  width: 250px;
   margin-bottom: 0;
   position: relative;
   text-align: left;
