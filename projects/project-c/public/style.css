@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: rgb(250, 163, 9);
   font-family: 'Goldman', cursive;
+  overflow: hidden;
 }
 /* overall wrapper */
 .masterWrapper{
