@@ -107,7 +107,7 @@ body {
 /* side boxes styling*/
 #roleBox, #chatBox {
   border:1px solid black;
-  width: 300px;
+  width: 250px;
   margin-bottom: 0;
   position: relative;
   text-align: left;
@@ -115,9 +115,15 @@ body {
   border: 5px solid white;
   font-size: 25px;
   box-shadow: 0 0 6px 4px;
-  margin: 40px;
+  margin:0;
 }
 
+#roleBox{
+  margin-right: 40px;
+}
+#chatBox{
+  margin-left: 40px;
+}
 .title{
   background-color: white;
   color: black;
