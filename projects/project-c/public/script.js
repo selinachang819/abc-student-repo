@@ -74,8 +74,8 @@ function preload() {
   img = loadImage('soccer.png');
 }
 function setup() {
-  canvasW = document.getElementById('canvasContainer').offsetWidth;
-  canvasH = document.getElementById('canvasContainer').offsetHeight;
+  canvasW = document.getElementById('canvasContainer').style.width;
+  canvasH = document.getElementById('canvasContainer').style.height;
   let myCanvas = createCanvas(canvasW, canvasH);
   myCanvas.parent('canvasContainer');
   frameRate(10);
