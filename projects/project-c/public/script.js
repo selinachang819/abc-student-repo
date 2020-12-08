@@ -88,8 +88,7 @@ function draw() {
 function field() {
   //field
   fill(65, 170, 102)
-  stroke(255);
-  strokeWeight(10);
+  noStroke();
   rect(0, 0, 1000, 800)
   //midfield line
   fill(255)
