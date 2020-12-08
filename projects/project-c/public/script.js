@@ -79,6 +79,7 @@ function setup() {
   let myCanvas = createCanvas(canvasW, canvasH);
   myCanvas.parent('canvasContainer');
   frameRate(10);
+  pixelDensity(1.0);
 }
 function draw() {
   field();
