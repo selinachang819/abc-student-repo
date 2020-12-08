@@ -57,6 +57,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 /* the field container */
 #canvasContainer{
