@@ -28,40 +28,43 @@
               <span id="blue">0</span>
           </div>
           <p id="text">You are playing: <span id="role"></span></p>
-          <div id="roleBox" style="visibility:hidden;">
-            <div class="title">
-              Players
-            </div>
-            <ul id="playersList">
-              <li class="red"><p class="players">RED 0 <button type="button" class="replace">Replace!</button></li>
-              <li class="red"><p class="players">RED 1 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="red"><p class="players">RED 2 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="red"><p class="players">RED 3 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="blue"><p class="players">BLUE 4 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="blue"><p class="players">BLUE 5 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="blue"><p class="players">BLUE 6 <button type="button" class="replace">Replace!</button></p></li>
-              <li class="blue"><p class="players">BLUE 7 <button type="button" class="replace">Replace!</button></p></li>
-            </ul>
-          </div>
-          <div id="canvasContainer">
-          </div>
-            <div id="chatBox">
+          <div class="gameInterface">
+            <div id="roleBox" style="visibility:hidden;">
               <div class="title">
-                Chat Room
+                Players
               </div>
-              <ul id="chatMessages">
+              <ul id="playersList">
+                <li class="red"><p class="players">RED 0 <button type="button" class="replace">Replace!</button></li>
+                <li class="red"><p class="players">RED 1 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="red"><p class="players">RED 2 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="red"><p class="players">RED 3 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="blue"><p class="players">BLUE 4 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="blue"><p class="players">BLUE 5 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="blue"><p class="players">BLUE 6 <button type="button" class="replace">Replace!</button></p></li>
+                <li class="blue"><p class="players">BLUE 7 <button type="button" class="replace">Replace!</button></p></li>
               </ul>
-              <div id="messageText">@ <select id="selectMember">
-                <option>ALL </option>
-                <option>RED 1</option>
-                <option>RED 2</option>
-                <option>RED 3</option>
-              </select>
-              <br>
-              <input type="text" id="message" placeholder="...?"autocomplete="false" name="hidden"></p>
-              <button type="button" id="send" >Send!</button>
             </div>
-        </div>
+            <div id="canvasContainer">
+            </div>
+            <div id="chatBox">
+                <div class="title">
+                  Chat Room
+                </div>
+                <ul id="chatMessages">
+                </ul>
+                <div id="messageText">@ <select id="selectMember">
+                  <option>ALL </option>
+                  <option>RED 1</option>
+                  <option>RED 2</option>
+                  <option>RED 3</option>
+                </select>
+                <br>
+                <input type="text" id="message" placeholder="...?"autocomplete="false" name="hidden"></p>
+                <button type="button" id="send" >Send!</button>
+              </div>
+          </div>
+          </div>
+
     </div>
     <script src="script.js">
     </script>

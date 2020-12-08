@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-color: rgb(250, 163, 9);
   font-family: 'Goldman', cursive;
-  overflow: hidden;
 }
 /* overall wrapper */
 .masterWrapper{
@@ -57,16 +56,23 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+}
+
+.gameInterface{
+  width:100vw;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* the field container */
 #canvasContainer{
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width:1000px;
   height: 800px;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
 }
 /* score board styling */
 #scoreContainer{
