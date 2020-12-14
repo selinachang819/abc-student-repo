@@ -1,141 +1,98 @@
 body{
-    font-family: "Comic Sans MS";
-    background-image: url(images/bg_1.png);
     background-blend-mode: lighten;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 25px;
+    font-family: 'Fredoka One', cursive;
+    background-color:#e7d7d8;
+}
+h1 {
+  padding: 10px;
+  color: #8C4F54;
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.title {
-  font-size: 30px;
-  margin: auto;
-  margin-bottom: 20px;
-  text-align: center;
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 252px;
+  perspective: 1000px;
+  border-radius: 15px;
+  margin:40px;
+  margin-top: 10px;
+  border-radius: 15px;
 }
-
-/* Slideshow container */
-.slideshow-container {
-  width: 80%;
-  background-color: #faf9f9;
-  border: black;
-  border-style: dashed;
+.flip-card-inner {
   position: relative;
-  margin: auto;
-  border-radius: 10px;
-
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
+.flip-card-front, .flip-card-back-a, .flip-card-back-b, .flip-card-back-c {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-back-a, .flip-card-back-b, .flip-card-back-c {
+  transform: rotateY(180deg);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  background-color: #A68181;
+  border-radius: 15px;
+  border: 7px solid #F4EDEB;
 }
 
-/* Hide the images by default */
-.mySlides {
-  width: 50%;
-  margin: auto;
-  display: none;
-  margin-top: auto;
+.flip-card-back-a{
+  background-color: #A68181;
+  color: #F4EDEB;
+}
+.flip-card-back-b{
+  background-color: #8C4F54;
+  color: #F4EDEB;
+}
+.flip-card-back-c{
+  background-color: #73585B;
+  color: #F4EDEB;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
 }
 
 img {
-  width: 95%;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  box-shadow: 5px 5px #888888;
-
+  border-radius: 15px;
 }
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
+
+.music {
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -50px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
-/* Caption text */
-.text {
-  position: relative;
-  color: black;
-  font-size: 15px;
-  width: 100%;
-  margin: 20px;
-  text-align: center;
-}
-
-.preview{
-  text-align: center;
-  width: 95%;
-  height: 340px;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  box-shadow: 5px 5px #888888;
-
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-#lp-off, #lp-on{
-  visibility: hidden;
-  position: absolute;
-  left: 37%;
-  top: 48.5%;
-  width: 15%;
-}
-#lp-on {
-
-  top: 49.1%;
-}
-#audio {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
+  top: 50px;
+  left: 20px;
+  width: 50px;
 }

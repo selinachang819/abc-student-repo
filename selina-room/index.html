@@ -4,86 +4,129 @@
     <meta charset="utf-8">
     <title>Welcome to Selina's Room!</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Hyperlink Gallery Banner -->
     <div style="position:fixed;width:100%;top:0;left:0;z-index:5;background-color:white;font-family:sans-serif;border:5px solid black;display:flex;justify-content:space-between;align-items:center;padding:0 20px;box-sizing:border-box;font-weight:bold;"><p style="margin:4px 0;margin-right:10px;font-weight:normal"><a style="color:black;font-size:0.9em;" href="https://abc.leoneckert.com/hyperlink-gallery"><< Lobby</a></p><span>H</span><span>y</span><span>p</span><span>e</span><span>r</span><span>l</span><span>i</span><span>n</span><span>k</span><span> </span><span>G</span><span>a</span><span>l</span><span>l</span><span>e</span><span>r</span><span>y</span><p style="margin:4px 0;margin-left:10px;font-weight:normal"><a style="color:black;font-size:0.9em;" href="https://abc.leoneckert.com/random-artist">random >></a></p></div>
-    <div id="all" style="margin-top:50px;">
-      <!-- <img id="bg" src="images/bg_1.png"> -->
-      <!-- Slideshow container -->
-      <div class="title">/Gallery S.C./</div>
-        <div class="slideshow-container">
-
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-          <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-I/" target="_blank"><img src="images/‌miniproject1.png"></a>
-            <div class="text">Gestalt</div>
+    <h1>Welcome to Selina's playground! Pick a card!</h1>
+    <div class="all">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
           </div>
-
-          <div class="mySlides fade">
-            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-2/" target="_blank"><img src="images/miniproject2.png"></a>
-            <div class="text">The Secret of Pets</div>
-          </div>
-
-          <div class="mySlides fade">
-            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-3/" target="_blank"><img src="images/miniproject3.png"></a>
-            <div class="text">When We Disco</div>
-          </div>
-          <div class="mySlides fade">
-            <a href="https://selinachang819.github.io/abc-student-repo/projects/project-a/" target="_blank"><img src="images/projecta.png"></a>
-            <div class="text">Tetris Artist.exe</div>
-          </div>
-          <div class="mySlides fade">
-            <a href="https://github.com/selinachang819/abc-student-repo/raw/master/projects/mini-project-4/surveillance-watcher.zip" download><img src="images/miniproject4.png"></a>
-            <div class="text">Surveillance Watcher</div>
-          </div>
-          <div class="mySlides fade">
-            <a  href="https://github.com/selinachang819/abc-student-repo/raw/master/projects/mini-project-5/videoBlocker.zip" download><img src="images/miniproject5.png"></a>
-            <div class="text">Video Blocker</div>
-          </div>
-          <div class="mySlides fade">
-            <a  href="https://github.com/selinachang819/abc-student-repo/raw/master/projects/project-b/gollum.zip" download><img src="images/projectb.gif"></a>
-            <div class="text">Gollum</div>
-          </div>
-          <div class="mySlides fade">
-            <a href="https://words-relay.glitch.me/"><img src="images/miniproject6.png"></a>
-            <div class="text">Word Relay Playground</div>
-          </div>
-          <div class="mySlides fade">
-            <a href="https://tamagotchi-play.glitch.me/"><img src="images/miniproject7.png"></a>
-            <div class="text">Tamagotchi!</div>
-          </div>
-          <div class="mySlides fade">
-            <a href="https://network-foosball.glitch.me/"><img src="images/projectc.jpg"></a>
-            <div class="text">Network Foosball</div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-I/" target="_blank">
+              <div class="flip-card-back-a">
+                Gestalt
+                </div></a>
         </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-          <span class="dot" onclick="currentSlide(8)"></span>
-          <span class="dot" onclick="currentSlide(9)"></span>
-          <span class="dot" onclick="currentSlide(10)"></span>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-2/" target="_blank">
+          <div class="flip-card-back-a">
+            The Secret of Pets
+          </div></a>
         </div>
-
-      <img id="lp-off" src="images/lp-off.png">
-      <img id="lp-on" src="images/lp-on.gif">
-      <audio id="audio" src="audio/bgm.mp3" loop controls>
-      </audio>
-    </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a href="https://selinachang819.github.io/abc-student-repo/projects/mini-project-3/" target="_blank">
+          <div class="flip-card-back-a">
+            When We Disco
+          </div> </a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a href="https://selinachang819.github.io/abc-student-repo/projects/project-a/" target="_blank">
+          <div class="flip-card-back-a">
+            Tetris Artist.exe
+          </div> </a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a href="https://github.com/selinachang819/abc-student-repo/tree/master/projects/mini-project-4" target="_blank">
+          <div class="flip-card-back-b">
+            Surveillance Watcher
+          </div></a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a  href="https://github.com/selinachang819/abc-student-repo/tree/master/projects/mini-project-5" target="_blank">
+          <div class="flip-card-back-b">
+            Video Blocker
+          </div> </a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a  href="https://github.com/selinachang819/abc-student-repo/tree/master/projects/project-b" target="_blank">
+          <div class="flip-card-back-b">
+            Gollum
+          </div> </a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+            <a href="https://words-relay.glitch.me/" target="_blank">
+          <div class="flip-card-back-c">
+              Words Relay Playground
+          </div></a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+            <a href="https://tamagotchi-play.glitch.me/" target="_blank">
+          <div class="flip-card-back-c">
+            Tamagotchi!
+          </div> </a>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/card.png">
+          </div>
+          <a href="https://network-foosball.glitch.me/" target="_blank">
+          <div class="flip-card-back-c">
+            Network Foosball
+        </div> </a>
+        </div>
+      </div>
+   </div>
+    <audio id="music" src="audio/bgm.mp3" autoplay loop preload="auto">
+    </audio>
+    <img class="music" id="on" src="images/on.gif">
+    <img class="music" id="off" src="images/off.png" style="display:none">
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

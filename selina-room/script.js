@@ -1,43 +1,14 @@
-let off = document.getElementById("lp-off");
-let on =document.getElementById('lp-on');
-let music =document.getElementById('audio');
+let on =document.getElementById('on');
+let off= document.getElementById('off');
+let music= document.getElementById('music');
 
-off.addEventListener("click",function(){
-  on.style.visibility="visible";
-  off.style.visibility="hidden";
-  audio.play();
+on.addEventListener('click',()=>{
+  music.pause();
+  on.style.display="none";
+  off.style.display="block";
 })
-on.addEventListener("click",function(){
-  off.style.visibility="visible";
-  on.style.visibility="hidden";
-  audio.pause();
+off.addEventListener('click',()=>{
+  music.play();
+  on.style.display="block";
+  off.style.display="none";
 })
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
